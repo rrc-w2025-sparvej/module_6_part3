@@ -39,8 +39,8 @@ jobs:
           if [ -f "./${{ matrix.service }}/Dockerfile" ]; then
             echo "build=true" >> "$GITHUB_OUTPUT"
           else
-            echo "build=false" >> "$GITHUB_OUTPUT"
-            echo "No Dockerfile for ${{ matrix.service }} — skipping."
+            echo "::error::Missing Dockerfile for ${{ matrix.service }}"
+            exit 1
           fi
 
       - name: Log in to GHCR
