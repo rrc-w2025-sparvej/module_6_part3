@@ -15,8 +15,6 @@ spec:
       labels:
         app: transactions
     spec:
-      imagePullSecrets:
-        - name: ghcr-creds
       containers:
         - name: transactions
           image: ghcr.io/rrc-w2025-sparvej/module_6_part3-transactions:latest

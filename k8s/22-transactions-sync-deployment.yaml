@@ -14,8 +14,6 @@ spec:
       labels:
         app: transactions-sync
     spec:
-      imagePullSecrets:
-        - name: ghcr-creds
       containers:
         - name: syncer
           image: ghcr.io/rrc-w2025-sparvej/module_6_part3-syncer:latest
